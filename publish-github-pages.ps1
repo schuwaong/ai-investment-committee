@@ -13,8 +13,8 @@ gh auth status | Out-Null
 
 $visibility = if ($Private) { "--private" } else { "--public" }
 
-$origin = git remote get-url origin 2>$null
-if ($LASTEXITCODE -ne 0 -or -not $origin) {
+$remotes = @(git remote)
+if ($remotes -notcontains "origin") {
   gh repo create $RepoName $visibility --source . --remote origin --push
 } else {
   git push -u origin HEAD
