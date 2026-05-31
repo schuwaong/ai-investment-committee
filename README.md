@@ -81,5 +81,17 @@ point the domain DNS to GitHub Pages.
 ## Suggested Pricing
 
 - Free: cached reports only
-- Premium beta: USD 29/month
+- Premium beta: USD 29/month, cancel anytime
 - Founder beta: USD 99 for 6 months, first 20 users
+
+## Payment Links
+
+Subscription buttons use `main.js`:
+
+- `paymentLink`: monthly premium checkout
+- `founderPaymentLink`: founder beta checkout
+
+Replace the placeholder Gumroad URLs with the live Stripe or Gumroad payment
+links before sending paid traffic. `/subscribe` should return the same monthly
+payment link, and `/cancel` should show the payment provider cancellation path
+or admin support flow.

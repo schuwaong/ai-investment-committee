@@ -1,8 +1,13 @@
 const paymentLink = "https://gumroad.com/l/ai-investment-committee-beta";
+const founderPaymentLink = "https://gumroad.com/l/ai-investment-committee-founder";
 const waitlistEmail = "joshuajian93@gmail.com";
 
 document.querySelectorAll("[data-payment-link]").forEach((node) => {
   node.setAttribute("href", paymentLink);
+});
+
+document.querySelectorAll("[data-founder-payment-link]").forEach((node) => {
+  node.setAttribute("href", founderPaymentLink);
 });
 
 const form = document.getElementById("waitlistForm");
