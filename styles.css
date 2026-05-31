@@ -487,6 +487,71 @@ footer {
   margin: 12px 0 0;
 }
 
+.report-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.command-table {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.command-table div {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.command-table div:last-child {
+  border-bottom: 0;
+}
+
+.command-table b {
+  color: var(--primary);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.command-table span, .command-table em {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.command-table em {
+  font-style: normal;
+  text-align: right;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.article-list article {
+  min-height: 250px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-list p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.article-list a {
+  margin-top: auto;
+  color: var(--primary);
+  font-weight: 800;
+}
+
 .link-hero {
   max-width: 680px;
   margin: 0 auto;
@@ -532,8 +597,19 @@ footer {
   .content-grid,
   .content-grid.three,
   .timeline,
-  .plans.standalone {
+  .plans.standalone,
+  .report-layout,
+  .article-list {
     grid-template-columns: 1fr;
+  }
+
+  .command-table div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .command-table em {
+    text-align: left;
   }
 
   .page-shell {
